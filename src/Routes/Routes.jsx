@@ -16,6 +16,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
+        loader: () => fetch('./phones.json'),
         element: <Home></Home>,
       },
       {
@@ -23,11 +24,11 @@ export const router = createBrowserRouter([
         element: <About></About>,
       },
       {
-        path: 'favorites',
+        path: '/favorites',
         element: <Favorites></Favorites>,
       },
       {
-        path: 'phoneDetails',
+        path: '/phoneDetails',
         element: <PhoneDetails></PhoneDetails>,
       },
     ],
