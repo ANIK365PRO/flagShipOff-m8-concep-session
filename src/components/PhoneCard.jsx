@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 const PhoneCard = ({ phone }) => {
   const { name, image, description } = phone;
-  console.log(phone);
+  // console.log(phone);
   return (
     <div className="card bg-base-100 shadow-sm">
       <figure>

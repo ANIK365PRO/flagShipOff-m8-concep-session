@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PhoneCard from './PhoneCard';
 
 const PhoneContainer = ({ phones }) => {
-  console.log(phones);
+  // console.log(phones);
   const [displayPhones, setDisplayPhones] = useState([]);
 
   const [showAllBtn, setShowAllBtn] = useState(false);
