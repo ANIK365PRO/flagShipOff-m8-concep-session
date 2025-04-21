@@ -17,9 +17,9 @@ export const router = createBrowserRouter([
       {
         index: true,
         hydrateFallbackElement: (
-          <h2 className="text-4xl md:text-8xl">Loading, please wait....</h2>
+          <h1 className="text-4xl md:text-8xl">Loading, please wait....</h1>
         ),
-        loader: () => fetch('./phones.json'),
+        loader: () => fetch('../phones.json'),
         element: <Home></Home>,
       },
       {
@@ -31,7 +31,12 @@ export const router = createBrowserRouter([
         element: <Favorites></Favorites>,
       },
       {
-        path: '/phoneDetails',
+        path: '/phoneDetails/:phonesId',
+
+        hydrateFallbackElement: (
+          <h2 className="text-4xl md:text-8xl">Loading, please wait....</h2>
+        ),
+        loader: () => fetch('../phones.json'),
         element: <PhoneDetails></PhoneDetails>,
       },
     ],

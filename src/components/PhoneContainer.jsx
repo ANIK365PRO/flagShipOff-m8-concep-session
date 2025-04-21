@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PhoneCard from './PhoneCard';
+import Button from './../Ui/Button';
 
 const PhoneContainer = ({ phones }) => {
   // console.log(phones);
@@ -28,7 +29,7 @@ const PhoneContainer = ({ phones }) => {
           ))}
         </div>
 
-        <button
+        {/* <button
           // onClick={() => setShowAllBtn(!showAllBtn)}
           onClick={() => {
             setShowAllBtn(prv => !prv);
@@ -47,7 +48,15 @@ const PhoneContainer = ({ phones }) => {
             className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
             data-rounded="rounded-lg"
           ></span>
-        </button>
+        </button> */}
+        <Button
+          type="submit"
+          onClick={() => {
+            setShowAllBtn(prv => !prv);
+            if (showAllBtn) window.scroll(0, 390);
+          }}
+          lable={showAllBtn ? 'Show Less' : 'Show All'}
+        ></Button>
       </div>
     </div>
   );
